@@ -1,0 +1,21 @@
+server:
+  port: 8085
+  servlet:
+    context-path: /v1
+
+spring:
+  #DB接続
+  datasource:
+    url: jdbc:mysql://localhost/study_demo
+    username: root
+    password: root
+    driver: com.mysql.jdbc.Driver
+    max-idle: 10
+    hikari:
+      max-lifetime: 30000
+
+  jackson:
+    time-zone: GMT+9
+
+base-url: ${baseURL:http://localhost:8081/}
+#auth-web-url: ${AuthWebURL:http://20.194.180.137/}
